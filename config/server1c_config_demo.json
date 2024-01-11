@@ -1,0 +1,12 @@
+﻿[
+	{"name": "server1cname",
+	"platform_path": "c:\\Program Files\\1cv8\\8.3.22.2239\\bin\\1cv8.exe",	
+	"cluster_user": "rac_user",
+	"cluster_password": "12345"
+	},
+	{"name": "server1cname2",
+	"platform_path": "c:\\Program Files\\1cv8\\8.3.22.2239\\bin\\1cv8.exe",	
+	"cluster_user": "rac_user",
+	"cluster_password": "12345"
+	}
+]

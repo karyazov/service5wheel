@@ -1,0 +1,24 @@
+[
+	{
+		"baseName": "test.buh.releaase",
+		"use_base": true,
+		"tasks":
+		[
+			{
+				"actionName": "action #1",
+				"actionOperation": "bindConfiguration",
+				"actionUse": true
+			},
+			{
+				"actionName": "action #2",
+				"actionOperation": "updateConfiguration",
+				"actionUse": true
+			},
+			{
+				"actionName": "action #3",
+				"actionOperation": "backupBase",
+				"actionUse": false
+			}
+		]
+	}
+]

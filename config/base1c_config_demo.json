@@ -1,0 +1,26 @@
+﻿[
+  {
+    "baseName": "base1name",
+    "server1cName": "server1cname",
+    "user":"baseUser",
+    "password":"userPassword",
+    "repository_path": "tcp://reppath",
+    "repository_user": "rep_user",
+    "repository_password": "12345",
+    "extension_name": "",
+    "serverSqlName": "sqlservername",
+    "sql_base": "sqlbasename"
+  },
+  {
+    "baseName": "base1name",
+    "server1cName": "server1cname",
+    "user":"baseUser",
+    "password":"userPassword",
+    "repository_path": "tcp://reppath",
+    "repository_user": "rep_user",
+    "repository_password": "12345",
+    "extension_name": "",
+    "serverSqlName": "sqlservername",
+    "sql_base": "sqlbasename"
+  }
+]
