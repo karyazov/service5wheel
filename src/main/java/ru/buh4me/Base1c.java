@@ -1,5 +1,8 @@
 package ru.buh4me;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class Base1c {
     private String baseName;
 
@@ -162,5 +165,7 @@ public class Base1c {
     public void setServer1cName(String server1cName) {
         this.server1cName = server1cName;
     }
+
+
 }
 

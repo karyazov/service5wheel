@@ -12,22 +12,7 @@ public class App {
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
-        String base1cConfigFile = "base1c_config.json";
 
-        //**************************
-        List<Server1c> listOfServers;
-        try {
-            listOfServers = LoadJSONSettings.loadSettingsServer1c();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        //Преобразуем список баз в хеш мапу (словарь) чтобы в дальнейшем по ключу получать
-        //свойства базы
-        HashMap<String, Server1c> dictServers = new HashMap<>();
-        for (Server1c server1c : listOfServers) {
-            dictServers.put(server1c.getName(), server1c);
-        }
-        //**************************
         //****** SQL SERVER
         List<ServerSql> listOfSqlServers;
         try {
@@ -41,25 +26,6 @@ public class App {
         for (ServerSql serverSql : listOfSqlServers) {
             dictServersSQL.put(serverSql.getName(), serverSql);
         }
-        //**************************
-        System.out.println();
-        List<Base1c> listOfBases;
-        try {
-            listOfBases = LoadJSONSettings.loadSettingsBase1c(base1cConfigFile);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        //Преобразуем список баз в хеш мапу (словарь) чтобы в дальнейшем по ключу получать
-        //свойства базы
-        HashMap<String, Base1c> dictBases = new HashMap<>();
-        for (Base1c b : listOfBases) {
-            dictBases.put(b.getBaseName(), b);
-            b.setServer_1c(dictServers.get(b.getServer1cName()));
-            b.setServer_SQL(dictServersSQL.get(b.getServerSqlName()));
-        }
-        //*******************************************************************
-        //          Есть словарь баз dictBases
-        //*******************************************************************
 
         List<Tasks> listOfTasks;
         try {

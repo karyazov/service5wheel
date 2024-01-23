@@ -30,12 +30,11 @@ public class LoadJSONSettings {
         return "";
 */
         if (Config.equals("SERVERSQL"))
-            return "server_sql_config.json";
+            return "config//server_sql_config.json";
         else if (Config.equals("SERVER1C")) {
-            return "server1c_config.json";
-
+            return "config//server1c_config.json";
         } else if (Config.equals("BASE1C")) {
-            return "server1c_config.json";
+            return "config//base1c_config.json";
         } else if (Config.equals("TASKS")) {
             return "test_task1.json";
         }
@@ -53,6 +52,9 @@ public class LoadJSONSettings {
 
         return objectMapper.readValue(jsonData, new TypeReference<List<Base1c>>() {
         });
+    }
+    public static List<Base1c> loadSettingsBase1c() throws IOException {
+        return loadSettingsBase1c(getConfigFile("BASE1C"));
     }
 
     public static List<Server1c> loadSettingsServer1c(String filePath) throws IOException {
