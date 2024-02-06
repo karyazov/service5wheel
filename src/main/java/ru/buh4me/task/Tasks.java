@@ -1,4 +1,4 @@
-package ru.buh4me;
+package ru.buh4me.task;
 
 import java.util.List;
 

@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<a href="/">Home</a>
+<p> Bases 1C </p>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>База 1С</th>
+        <th>Сервер 1С</th>
+        <th>Сервер SQL</th>
+    </tr>
+    </thead>
+    <tbody th:each="base1c, iStat : ${bases1c}">
+    <tr th:style="${iStat.odd}? 'font-weight: bold;'">
+        <td th:text="${iStat.index}+1"></td>
+        <td th:text="${base1c.baseName}"></td>
+        <td th:text="${base1c.server1cName}"></td>
+        <td th:text="${base1c.serverSqlName}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

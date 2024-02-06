@@ -1,6 +1,6 @@
-config/base1c_config.json
-config/server_sql_config.json
-config/server1c_config.json
+resources/config/base1c_config.json
+resources/config/server_sql_config.json
+resources/config/server1c_config.json
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

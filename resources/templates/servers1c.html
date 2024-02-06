@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<a href="/">Home</a>
+<p> Servers 1C </p>
+<table border="1">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Сервер 1С</th>
+        <th>Путь к платформе</th>
+        <th>Администратор кластера</th>
+    </tr>
+    </thead>
+    <tbody th:each="server1c, iStat : ${servers1c}">
+    <tr th:style="${iStat.odd}? 'font-weight: bold;'">
+        <td th:text="${iStat.index}+1"></td>
+        <td><input type="checkbox" name="servers1c" th:value="${server1c.name}"/>
+            <label th:text="${server1c.name}"></label></td>
+        <td th:text="${server1c.platform_path}"></td>
+
+        <td th:text="${server1c.cluster_user}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

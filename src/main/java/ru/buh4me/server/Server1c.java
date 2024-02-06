@@ -1,8 +1,8 @@
-package ru.buh4me;
+package ru.buh4me.server;
 
 
 public class Server1c {
-    private String server_name;
+    private String name;
     private String platform_path;
     private String cluster_user;
     private String cluster_password;
@@ -16,11 +16,11 @@ public class Server1c {
     }
 
     public String getName() {
-        return server_name;
+        return name;
     }
 
     public void setName(String server_name) {
-        this.server_name = server_name;
+        this.name = server_name;
     }
 
     public String getPlatform_path() {

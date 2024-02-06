@@ -1,4 +1,4 @@
-package ru.buh4me;
+package ru.buh4me.base;
 
 import java.util.HashMap;
 import java.util.List;

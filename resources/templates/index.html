@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<p> Консоль администратора </p>
+<table>
+    <tr>
+        <td> <a href="servers1c">   Сервера 1C     </a></td>
+        <td> <a href="bases1c">    Базы 1C     </a></td>
+        <td> <a href="serversSQL">    Сервера SQL     </a></td>
+    </tr>
+<thead>
+<div class="table1" width:50%>
+</table>
+<table border="1">
+<tr>
+    <th>№</th>
+    <th>Отметка</th>
+    <th>База 1С</th>
+    <th>Сервер 1С</th>
+    <th>Сервер SQL</th>
+</tr>
+</thead>
+<tbody th:each="base1c, iStat : ${bases1c}">
+<tr th:style="${iStat.odd}? 'font-weight: bold;'">
+    <td th:text="${iStat.index}+1"></td>
+    <td><input type="checkbox" name="base1c" th:value="${base1c.baseName}"/></td>
+    <td> <a th:href="@{base1c(baseName=${base1c.baseName})}" th:text="${base1c.baseName}"</a></td>
+    <td th:text="${base1c.server1cName}"></td>
+    <td th:text="${base1c.serverSqlName}"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table2" width:50%>
+</div>
+</body>
+</html>

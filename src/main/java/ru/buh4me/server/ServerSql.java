@@ -1,4 +1,4 @@
-package ru.buh4me;
+package ru.buh4me.server;
 
 public class ServerSql {
     private String name;

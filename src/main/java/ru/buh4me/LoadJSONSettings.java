@@ -2,6 +2,10 @@ package ru.buh4me;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ru.buh4me.base.Base1c;
+import ru.buh4me.server.Server1c;
+import ru.buh4me.server.ServerSql;
+import ru.buh4me.task.Tasks;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -30,11 +34,11 @@ public class LoadJSONSettings {
         return "";
 */
         if (Config.equals("SERVERSQL"))
-            return "config//server_sql_config.json";
+            return "resources//config//server_sql_config.json";
         else if (Config.equals("SERVER1C")) {
-            return "config//server1c_config.json";
+            return "resources//config//server1c_config.json";
         } else if (Config.equals("BASE1C")) {
-            return "config//base1c_config.json";
+            return "resources//config//base1c_config.json";
         } else if (Config.equals("TASKS")) {
             return "test_task1.json";
         }
